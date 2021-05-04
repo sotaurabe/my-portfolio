@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 80px;
+  width: 100%;
+  background-color: rgba(36, 159, 241, 0.7);
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.title {
+  color: white;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.point-box {
+  height: 80px;
+  background-color: rgba(62, 115, 230, 0.7);
+  position: absolute;
+  right: 0px;
+  display: flex;
+  align-items: center;
+}
+.pont-title {
+  right: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+.your-year-container {
+  display: flex;
+  justify-content: center;
+}
+.countdown {
+  text-align: center;
+}
+
+h1 {
+  font-size: 22px;
+  position: relative;
+  padding: 0.5em;
+  background: hsl(310, 89%, 82%);
+  color: white;
+}
+
+.timer {
+  font-size: 35px;
+}
