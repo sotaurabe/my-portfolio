@@ -10,7 +10,7 @@
   </head>
   <body>
     <header>
-      <p class="title">浦部蒼太の誕生日をお祝いしてくだい!!</p>
+      <p class="title" id="title">浦部蒼太の誕生日をお祝いしてくだい!!</p>
       <div class="point-box">
         <div class="point-titele">
           <p>あなたの所持ポイント</p>
@@ -20,59 +20,121 @@
     </header>
 
     <div class="your-year-container">
-      あなたの年齢を選択してください
+      <div id="year-message">あなたの年齢を選択してください</div>
       <input type="number" id="your-year" min="6" max="99" />
       <button id="year-button">決定</button>
     </div>
 
     <div class="countdown">
-      <h1>私の誕生日　5月21日まで</h1>
+      <div class="midashi">私の誕生日　5月21日まで</div>
       <p>あと <span class="timer" id="timer"></span></p>
     </div>
 
+    <div class = "gift-container">
+      <div id="gift-message" class="midashi">ギフトをプレゼントしてください！！</div>
+      <div class="gift-box">
+        <div class="gift-title">
+        <img src="../images/maunntennbaiku.jpg" height="80%" width="80%">
+        <div class="gift">
+          マウンテンバイク
+        </div>
+        <div class="gift-price">1000pt</div>
+        <button id="gift-button1" class="gift-button">プレゼントする</button>
+        </div>
+
+        <div class="gift-title">
+        <img src="../images/dsi.jpeg" height="80%" width="80%">
+        <div class="gift">
+          DSi 
+        </div>
+        <div class="gift-price">500pt</div>
+        <button id="gift-button2" class="gift-button">プレゼントする</button>
+        </div>
+
+       <div class="gift-title">
+        <img src="../images/koumipe-suto.jpg" height="80%" width="80%">
+        <div class="gift">
+          香味ペースト
+        </div>
+        <div class="gift-price">100pt</div>
+        <button id="gift-button3" class="gift-button">プレゼントする</button>
+      </div>
+      </div>
+      
+      <div class="receive-container">
+        <div id="receive-message">頂いたプレゼントはここに保管されます</div>
+        <div class="receive-box">
+          <div class="receive-gift">
+          <img src="../images/maunntennbaiku.jpg" height="60px" width="60px">
+          <p><span id="gift-number1"></span>台</p>
+          </div>
+
+          <div class="receive-gift">
+          <img src="../images/dsi.jpeg" height="60px" width="60px">
+          <p><span id="gift-number2"></span>台</p>
+          </div>
+
+          <div class="receive-gift">
+          <img src="../images/koumipe-suto.jpg" height="60px" width="60px">
+          <p><span id="gift-number3"></span>ペースト</p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
     <div class="pointup-container">
+      <div id="pointup-message" class="midashi">ゲームでポイントを獲得しましょう</div>
       <div class="omikuzi-container"></div>
       <div class="zyanken-container">
-          <h3>ジャンケン</h3>
-      　<hr>
-      　<table border="0" align="center">
-          <tr>
-              <th width="200" height="200"><div id="ahand"></div></th>
-              <th>VS</th>
-              <th width="200" height="200"><div id="bhand"></div></th>
-          </tr>
-
-          <tr>
-              <th>相手</th>
-              <td>&nbsp;</td>
-              <th>自分</th>
-          </tr>
-
-          <tr>
-              <tr aria-colspan="3">&nbsp;</tr>
-          </tr>
-
-          <tr>
-              <tr aria-colspan="3">
-                  <form name="janken">
-                      <table border="0" align="center">
-                          <tr>
-                              <td colspan="3"><div id="message"></div></td>
-                          </tr>
-                          <tr>
-                              <th><input type="button" onClick="getbhand(0)" value="グー"></th>
-                              <th><input type="button" onClick="getbhand(1)" value="チョキ"></th>
-                              <th><input type="button" onClick="getbhand(2)" value="パー"></th>
-                          </tr>
-                          <th>
-                              <th colspan="3"><input type="button" onClick="handreset()" value="リセット" id="reset"></th>
-                          </th>
-                      </table>
-                  </form>
-              </tr>
-          </tr>
-      </table>
-
+        <h3>ジャンケン</h3>
+        <div class="zyanken-button">
+          <button id="start-button">ゲームを始める</button>
+          <button id="finish-button">ゲームをやめる</button>
+        </div>
+        
+        <hr>
+        <div class="game-area"> 
+          <table border="0" align="center"　>
+            <tr>
+                <th width="200" height="200"><div id="ahand"></div></th>
+                <th>VS</th>
+                <th width="200" height="200"><div id="bhand"></div></th>
+            </tr>
+  
+            <tr>
+                <th>相手</th>
+                <td>&nbsp;</td>
+                <th>自分</th>
+            </tr>
+  
+            <tr>
+                <tr aria-colspan="3">&nbsp;</tr>
+            </tr>
+  
+            <tr>
+                <tr aria-colspan="3">
+                    <form name="janken">
+                        <table border="0" align="center" class="sosa-area">
+                            <tr>
+                                <td colspan="3"><div id="message"></div></td>
+                            </tr>
+                            <tr>
+                                <th><input type="button" onClick="getbhand(0)" value="グー"></th>
+                                <th><input type="button" onClick="getbhand(1)" value="チョキ"></th>
+                                <th><input type="button" onClick="getbhand(2)" value="パー"></th>
+                            </tr>
+                            <th>
+                                <th colspan="3"><input type="button" onClick="handreset()" value="リセット" id="reset"></th>
+                            </th>
+                        </table>
+                    </form>
+                </tr>
+            </tr>
+         </table>
+  
+        </div>
+        
       </div>
     
     </div>

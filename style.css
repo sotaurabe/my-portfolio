@@ -3,15 +3,19 @@
   padding: 0;
 }
 
+body {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
 header {
   height: 80px;
   width: 100%;
-  background-color: rgba(36, 159, 241, 0.7);
+  background-color: rgba(36, 159, 241, 0.5);
   position: fixed;
+  top: 0px;
   z-index: 1;
   display: flex;
   align-items: center;
-  position: relative;
 }
 
 .title {
@@ -31,29 +35,122 @@ header {
 .pont-title {
   right: 20px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
-
-body {
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+#point {
+  color: red;
+  font-size: 30px;
 }
 
 .your-year-container {
+  margin-top: 100px;
   display: flex;
   justify-content: center;
 }
 .countdown {
   text-align: center;
+  margin-top: 20px;
 }
 
-h1 {
+.timer {
+  font-size: 35px;
+}
+
+.midashi {
   font-size: 22px;
-  position: relative;
+  text-align: center;
   padding: 0.5em;
   background: hsl(310, 89%, 82%);
   color: white;
 }
 
-.timer {
-  font-size: 35px;
+#gift-message {
+  margin-top: 50px;
+}
+.gift-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.gift-title {
+  background-color: #e0f8e6;
+  height: 350px;
+  width: 25%;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 20px;
+}
+
+.gift-price {
+  color: red;
+}
+
+.gift-button {
+  margin-top: 10px;
+}
+
+.receive-container {
+  width: 40%;
+  height: 130px;
+  margin-top: 30px;
+  margin-right: 30%;
+  margin-left: 30%;
+  text-align: center;
+  background-color: #e0f8e6;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
+}
+
+.receive-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#pointup-message {
+  margin-top: 50px;
+}
+
+.zyanken-container {
+  width: 80%;
+  background-color: #e0f8e6;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.zyanken-container h3 {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.zyanken-button {
+  display: flex;
+  justify-content: space-around;
+
+  margin-top: 20px;
+}
+
+.game-area {
+  margin-right: 30%;
+  margin-left: 30%;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+.sosa-area {
+  display: flex;
+  justify-content: space-around;
+}
+
+#reset {
+  text-align: center;
 }
