@@ -96,7 +96,7 @@ let giftList = {
   num2: 0,
   num3: 0,
 };
-giftList = JSON.parse(localStorage.giftList);
+//giftList = JSON.parse(localStorage.getItem("giftList"));
 giftNumber1.textContent = giftList.num1;
 giftNumber2.textContent = giftList.num2;
 giftNumber3.textContent = giftList.num3;
@@ -105,9 +105,9 @@ giftButton1.onclick = function () {
   if (point >= 1000) {
     point = point - 1000;
     pointDisply.textContent = point;
-    giftList = JSON.parse(localStorage.giftList);
+    //giftList = JSON.parse(localStorage.giftList);
     giftList.num1 += 1;
-    localStorage.giftList = JSON.stringify(giftList);
+    //localStorage.giftList = JSON.stringify(giftList);
     giftNumber1.textContent = giftList.num1;
   } else {
     alert("ポイントが不足しています！");
@@ -118,9 +118,9 @@ giftButton2.onclick = function () {
   if (point >= 500) {
     point = point - 500;
     pointDisply.textContent = point;
-    giftList = JSON.parse(localStorage.giftList);
+    //giftList = JSON.parse(localStorage.giftList);
     giftList.num2 += 1;
-    localStorage.giftList = JSON.stringify(giftList);
+    //localStorage.giftList = JSON.stringify(giftList);
     giftNumber2.textContent = giftList.num2;
   } else {
     alert("ポイントが不足しています！");
@@ -131,9 +131,9 @@ giftButton3.onclick = function () {
   if (point >= 100) {
     point = point - 100;
     pointDisply.textContent = point;
-    giftList = JSON.parse(localStorage.giftList);
+    //giftList = JSON.parse(localStorage.getItem("giftList"));
     giftList.num3 += 1;
-    localStorage.giftList = JSON.stringify(giftList);
+    //localStorage.setItem("giftList", JSON.stringify(giftList));
     giftNumber3.textContent = giftList.num3;
   } else {
     alert("ポイントが不足しています！");
